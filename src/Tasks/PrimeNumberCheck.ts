@@ -12,5 +12,14 @@ function isPrime(n: number): boolean {
     return true
 
 }
+
+function printPrimes(value: number): any{
+    for( let n = 2; n <= value; n++){
+        if (isPrime(n)){
+            console.log(n);
+        }
+    }
+}
+printPrimes(100)
 console.log(isPrime(10));
 console.log(isPrime(11));
