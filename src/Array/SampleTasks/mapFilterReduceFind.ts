@@ -1,3 +1,5 @@
+//Map, Filter, Reduce, Find
+
 let scores: number[] = [80,92,65,100,88];
 
 // Map -> transform

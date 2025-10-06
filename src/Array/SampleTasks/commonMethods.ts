@@ -1,3 +1,4 @@
+//Common Methods
 let fruits: string[] = ["Apple","Banana","Kiwi"];
 
 fruits.push("Grapes"); //add the value at end
