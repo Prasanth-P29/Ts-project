@@ -1,3 +1,6 @@
+import funcData from "./funcData.json"
+
+
 //Function and Arrays
 
 //Normal Function with return type

@@ -1,3 +1,5 @@
+import project from "./getData.json"
+
 export function showProjectBanner(): void {
     const PROJECT_NAME: string = "Enterprise Automation System";
     const VERSION: string = "1.0.0";

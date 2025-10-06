@@ -1,3 +1,5 @@
+import data from "./basicData.json"
+
 //Variables with datatypes
 let employeeName: string = "John Wick";
 let employeeAge: number = 30;
