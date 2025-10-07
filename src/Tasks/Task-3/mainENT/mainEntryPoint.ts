@@ -1,6 +1,6 @@
-import { showProjectBanner, helloWorld } from "../getStart/gettingStarted.js";
-import { checkEligibility, showLoopDemo} from "../basicTS/basicTypeScript.js";
-import { calculateBonus, greetEmployee, taskSummary, generateTaskReport} from "../funcArr/functionsArrays.js"
+import { showProjectBanner, helloWorld } from "../getStart/gettingStarted";
+import { checkEligibility, showLoopDemo} from "../basicTS/basicTypeScript";
+import { calculateBonus, greetEmployee, taskSummary, generateTaskReport} from "../funcArr/functionsArrays"
 
 //Run Module-1
 showProjectBanner();

@@ -1,10 +1,14 @@
-import data from "./basicData.json"
+import basicData from "./basicData.json";
+
+
+const [employee] : any = basicData;
+
 
 //Variables with datatypes
-let employeeName: string = "John Wick";
-let employeeAge: number = 30;
-let department: "QA" | "DEV" | "OPS"  = "QA";
-let isPermanent: boolean = true;
+let employeeName: string = employee.employeeName;
+let employeeAge: number = Number(employee.employeeAge);
+let department: "QA" | "DEV" | "OPS" = employee.department;
+let isPermanent: boolean = employee?.isPermanent === "true";
 
 
 //Operators + Conditionals
@@ -21,8 +25,8 @@ export function checkEligibility(): void {
 //Loops Example
 export function showLoopDemo(): void{
     console.log("-----Loop Demonstration-----");
-    for(let i = 1; i <= 5; i++){
-        console.log(`$ Iteration:${i}, ${employeeName} is Work as a ${department}`)
+    for (let i = 1; i <= 5; i++) {
+        console.log(`Iteration:${i}, ${employeeName} works as a ${department}`);
     }
 
     let skills: string[] = ["Selenium", "Cypress", "PlayWright", "API Testing"];

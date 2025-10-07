@@ -1,1 +1,8 @@
-{}
+[
+    {
+     "employeeName": "John Wick",
+     "employeeAge": "30",
+     "department": "QA",
+     "isPermanent": "true"
+    }
+]
