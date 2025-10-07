@@ -8,7 +8,7 @@ const [employee] : any = basicData;
 let employeeName: string = employee.employeeName;
 let employeeAge: number = Number(employee.employeeAge);
 let department: "QA" | "DEV" | "OPS" = employee.department;
-let isPermanent: boolean = employee?.isPermanent === "true";
+let isPermanent: boolean = employee.isPermanent === "true";
 
 
 //Operators + Conditionals

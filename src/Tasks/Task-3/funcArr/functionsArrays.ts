@@ -10,7 +10,7 @@ export function calculateBonus(salary: number, exp: number): number {
 
 //Arrow Function with Optional Parameter
 export const greetEmployee = (name: string, role: string = "Engineer"): string => {
-    return `Hello,${name}. Your role is ${role}`
+    return `Hello,${name} Your role is ${role}`
 };
 
 //Array Operations
