@@ -1,21 +1,34 @@
-type Transaction = {
+type Vehicle = {
   id: number;
-  type: "credit" | "debit";
-  amount: number;
-  location: string;
+  driver: string;
+  route: { from: string; to: string; distanceKm: number; fuelUsed: number }[];
 };
 
-let transactions: Transaction[] = [
-  { id: 1, type: "debit", amount: 500, location: "Delhi" },
-  { id: 2, type: "debit", amount: 1500, location: "Mumbai" },
-  { id: 3, type: "credit", amount: 2000, location: "Delhi" },
-  { id: 4, type: "debit", amount: 10000, location: "Dubai" }
+let fleet: Vehicle[] = [
+  {
+    id: 1,
+    driver: "Alice",
+    route: [
+      { from: "Delhi", to: "Jaipur", distanceKm: 280, fuelUsed: 25 },
+      { from: "Jaipur", to: "Udaipur", distanceKm: 400, fuelUsed: 35 }
+    ]
+  },
+  {
+    id: 2,
+    driver: "Bob",
+    route: [
+      { from: "Mumbai", to: "Pune", distanceKm: 150, fuelUsed: 20 },
+      { from: "Pune", to: "Nagpur", distanceKm: 750, fuelUsed: 60 }
+    ]
+  }
 ];
 
-// Detect suspicious (debit > 5000 or foreign location)
-let suspicious = transactions.filter(
-  t => (t.type === "debit" && t.amount > 5000) || t.location !== "Delhi"
-);
+// Efficiency: km per liter
+let efficiencyReport = fleet.map(v => {
+  let totalDist = v.route.reduce((d, r) => d + r.distanceKm, 0);
+  let totalFuel = v.route.reduce((f, r) => f + r.fuelUsed, 0);
+  return { driver: v.driver, efficiency: (totalDist / totalFuel).toFixed(2) };
+});
 
-console.log("=== Suspicious Transactions ===");
-console.log(suspicious);
+console.log("=== Fleet Efficiency Report ===");
+console.table(efficiencyReport);
