@@ -46,8 +46,8 @@ class CardPayment implements Payment {
     }
 }
 
-const upi = new UpiPayment();
-upi.pay(1500);
+const upis = new UpiPayment();
+upis.pay(1500);
 
 const card = new CardPayment();
 card.pay(4000);

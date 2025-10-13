@@ -116,3 +116,29 @@ function simulateUserActions() {
 // 🚀 Run Simulation
 
 simulateUserActions();
+
+//WORKFLOW OF THIS PROGRAM
+
+//👩‍💻 BankAccount — Blueprint class (common code for all accounts)
+
+// Keeps holder name, balance, and base deposit/withdraw logic.
+
+// Says “Any child class must implement calculateInterest()”.
+
+// 💰 SavingsAccount — follows BankAccount rules + adds 4% interest calculation.
+
+// 💳 CurrentAccount — follows BankAccount rules + adds overdraft logic (no interest).
+
+// 🏗️ createAccount() — factory function that decides which account to create.
+
+// 🚀 simulateUserActions() — runs everything:
+
+// Creates 2 users
+
+// Performs deposit, withdraw, interest calc
+
+// Prints everything neatly.
+
+// private → hide inside class only
+// protected → share only with subclasses
+// abstract → base structure without implementation
