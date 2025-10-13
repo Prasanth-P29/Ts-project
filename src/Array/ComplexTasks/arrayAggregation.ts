@@ -1,31 +1,36 @@
 type Loan = {
   loanId: number;
-  customer: string;
+  accName: string;
   amount: number;
-  type: "Home" | "Car" | "Personal";
-  overdue: boolean;
+  type: "Home" | "Personal" | "Car";
+  overDue: boolean
 };
 
 let loans: Loan[] = [
-  { loanId: 101, customer: "Alice", amount: 500000, type: "Home", overdue: false },
-  { loanId: 102, customer: "Bob", amount: 300000, type: "Car", overdue: true },
-  { loanId: 103, customer: "Charlie", amount: 100000, type: "Personal", overdue: false },
-  { loanId: 104, customer: "David", amount: 750000, type: "Home", overdue: true }
+  {loanId: 101, accName: "Prasanth", amount: 1000000, type: "Home", overDue: false},
+  {loanId: 102, accName: "Suganthan", amount: 400000, type: "Car", overDue: true},
+  {loanId: 103, accName: "Rahul", amount: 2000000, type: "Home", overDue: false},
+  {loanId: 104, accName: "Anas", amount: 500000, type: "Personal", overDue: true},
+  {loanId: 105, accName: "Asraf", amount: 300000, type: "Personal", overDue: false}
 ];
 
-// Group loan amounts by type
-let loanSummary = loans.reduce((acc, l) => {
+//Group loan amount by type
+let loanSummary = loans.reduce((acc,l) => {
   acc[l.type] = (acc[l.type] || 0) + l.amount;
   return acc;
-}, {} as Record<string, number>);
+}, {} as Record<string, number>); // for first iteration it will be {Home: 100000}
 
-// Overdue risk analysis
-let overdueLoans = loans.filter(l => l.overdue);
-let overdueAmount = overdueLoans.reduce((sum, l) => sum + l.amount, 0);
+//filter the accounts by conditions is true
+let overdueLoans = loans.filter(l => l.overDue);
 
-console.log("=== Loan Portfolio Summary ===");
-console.log(loanSummary);
+//filtered account amounts are added for total overDue amounts
+let overdueAmounts = loans.reduce((sum,l) => sum + l.amount, 0);
 
-console.log("\n=== Overdue Analysis ===");
-console.log("Overdue Loans:", overdueLoans.length);
-console.log("Overdue Amount:", overdueAmount);
+console.log("------Loans Summary Portfolio------");
+console.log("loans Summary:", loanSummary);
+
+console.log("-----OverDue Loans-----");
+console.log("OverDue Loans:", overdueLoans)
+
+console.log("-----OverDue Amounts-----")
+console.log("OverDue Amounts:", overdueAmounts);

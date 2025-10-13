@@ -43,7 +43,7 @@ product1.display();
 product1.updateStock(20);
 
 //High - Level : Encapsulation and Private fields
-class BankAccount {
+class BankAccounts {
 
     private balance: number;
     constructor(initialBalance: number){
@@ -69,7 +69,7 @@ class BankAccount {
     }
 }
 
-const account = new BankAccount(5000);
+const account = new BankAccounts(5000);
 account.deposit(3000);
 account.withDraw(2000);
 console.log(`Final Balance : ${account.getBalance()}`);
