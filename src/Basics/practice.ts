@@ -82,43 +82,43 @@ console.log(b2.isWorth);
 
 console.log("-------------------");
 
-interface TestCase {
-    id: number;
-    name: string;
-    status: "passed"| "failed" | "pending!";
-}
+// interface TestCase {
+//     id: number;
+//     name: string;
+//     status: "passed"| "failed" | "pending!";
+// }
 
-function changeStatus(test: TestCase): void {
-    if (test.status === "failed") {
-        // if failed → change to passed
-        test.status = "passed";
-    } else if (test.status === "pending!") {
-        // if pending → just show a message
-        console.log(test.name + " is still pending");
-    } else {
-        // if already passed
-        console.log(test.name + " is already passed");
-    }
-}
+// function changeStatus(test: TestCase): void {
+//     if (test.status === "failed") {
+//         // if failed → change to passed
+//         test.status = "passed";
+//     } else if (test.status === "pending!") {
+//         // if pending → just show a message
+//         console.log(test.name + " is still pending");
+//     } else {
+//         // if already passed
+//         console.log(test.name + " is already passed");
+//     }
+// }
 
 
-let testcases: TestCase[] = [
+// let testcases: TestCase[] = [
 
-    { id: 1,name: "SignUp Test",status: "passed"},
-    { id: 2,name: "Login Test",status: "failed"},
-    { id: 3,name: "Payment Test",status: "pending!"},
-    {id: 4,name: "Logout Test",status: "passed"}
+//     { id: 1,name: "SignUp Test",status: "passed"},
+//     { id: 2,name: "Login Test",status: "failed"},
+//     { id: 3,name: "Payment Test",status: "pending!"},
+//     {id: 4,name: "Logout Test",status: "passed"}
 
-]
+// ]
 
-for (let tc of testcases) {
-    changeStatus(tc);     // call the function for each test
-}
+// for (let tc of testcases) {
+//     changeStatus(tc);     // call the function for each test
+// }
 
-console.log("Passed Testcases");
-for(let tc of testcases){
-    if (tc.status === "passed"){
-        console.log(tc);
-    }
-}
+// console.log("Passed Testcases");
+// for(let tc of testcases){
+//     if (tc.status === "passed"){
+//         console.log(tc);
+//     }
+// }
 

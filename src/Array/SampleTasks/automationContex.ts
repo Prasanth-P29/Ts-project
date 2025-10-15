@@ -1,10 +1,10 @@
-type TestCase = {
+type TestCasee = {
     id: number;
     title: string;
     status: "Pass" | "Fail" | "Skip"
 };
 
-let testCases: TestCase[] = [
+let testCasess: TestCasee[] = [
     {id: 1, title: "Login with Valid Credentials", status: "Pass"},
     {id: 2, title: "Login with Invalid Password", status: "Fail"},
     {id: 3, title: "Checkout with EmptyCart", status: "Skip"},
@@ -12,9 +12,9 @@ let testCases: TestCase[] = [
 ];
 
 //Count the test results
-let passed = testCases.filter(tc => tc.status === "Pass").length;
-let failed = testCases.filter(tc => tc.status === "Fail").length;
-let skipped = testCases.filter(tc => tc.status === "Skip").length;
+let passed = testCasess.filter(tc => tc.status === "Pass").length;
+let failed = testCasess.filter(tc => tc.status === "Fail").length;
+let skipped = testCasess.filter(tc => tc.status === "Skip").length;
 
 console.log("Test Summary:")
 console.log("Passed:", passed);
