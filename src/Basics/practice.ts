@@ -1,86 +1,87 @@
-let userName: string = "Prasanth";
-const appName: string = "MyApp";
 
-let age: number = 22;
-let married: boolean = false;
+// let userName: string = "Prasanth";
+// const appName: string = "MyApp";
 
-console.log(userName);
-console.log(appName);
-console.log(age);
-console.log(married);
+// let age: number = 22;
+// let married: boolean = false;
 
-console.log("-------------------");
+// console.log(userName);
+// console.log(appName);
+// console.log(age);
+// console.log(married);
 
-let laptop: {brand: string, price: number, isGaming: boolean} = {
-    brand: "Asus",
-    price: 100000,
-    isGaming: true
-};
-console.log(laptop);
-console.log(laptop.brand);
+// console.log("-------------------");
 
-console.log("-------------------");
+// let laptop: {brand: string, price: number, isGaming: boolean} = {
+//     brand: "Asus",
+//     price: 100000,
+//     isGaming: true
+// };
+// console.log(laptop);
+// console.log(laptop.brand);
 
-type Student = {
-    name: string;
-    age: number;
-    dept: string;
-    isGraduated: boolean;
-}
+// console.log("-------------------");
 
-let st1: Student = {
-    name: "clark kent",
-    age: 24,
-    dept: "Journalism",
-    isGraduated: true
-};
+// type Student = {
+//     name: string;
+//     age: number;
+//     dept: string;
+//     isGraduated: boolean;
+// }
 
-let st2: Student = {
-    name: "Bruce Wayne",
-    age: 26,
-    dept: "Business",
-    isGraduated: true
-};
+// let st1: Student = {
+//     name: "clark kent",
+//     age: 24,
+//     dept: "Journalism",
+//     isGraduated: true
+// };
 
-let st3: Student = {
-    name: "Diane Prince",
-    age: 23,
-    dept: "History",
-    isGraduated: false
-};
-console.log(st1);
-console.log(st2);
-console.log(st3);
+// let st2: Student = {
+//     name: "Bruce Wayne",
+//     age: 26,
+//     dept: "Business",
+//     isGraduated: true
+// };
 
-console.log(st2.dept);
+// let st3: Student = {
+//     name: "Diane Prince",
+//     age: 23,
+//     dept: "History",
+//     isGraduated: false
+// };
+// console.log(st1);
+// console.log(st2);
+// console.log(st3);
 
-console.log("-------------------");
+// console.log(st2.dept);
 
-interface book {
-    name: string;
-    author: string;
-    price: number;
-    isWorth: boolean;
-}
+// console.log("-------------------");
 
-let b1: book = {
-    name: "Atomic habits",
-    author: "kent",
-    price: 500,
-    isWorth: true
-};
+// interface book {
+//     name: string;
+//     author: string;
+//     price: number;
+//     isWorth: boolean;
+// }
 
-let b2: book = {
-    name: "The power of your subconscious mind",
-    author: "Joseph Murpy",
-    price: 600,
-    isWorth: true
-};
+// let b1: book = {
+//     name: "Atomic habits",
+//     author: "kent",
+//     price: 500,
+//     isWorth: true
+// };
 
-console.log(b1);
-console.log(b2.isWorth);
+// let b2: book = {
+//     name: "The power of your subconscious mind",
+//     author: "Joseph Murpy",
+//     price: 600,
+//     isWorth: true
+// };
 
-console.log("-------------------");
+// console.log(b1);
+// console.log(b2.isWorth);
+
+// console.log("-------------------");
 
 // interface TestCase {
 //     id: number;
@@ -122,3 +123,4 @@ console.log("-------------------");
 //     }
 // }
 
+// 
