@@ -16,3 +16,5 @@ let availableFlights = flights.filter(f => f.seats.some(s => !s.booked));
 
 console.log("=== Available Flights ===");
 console.log(availableFlights);
+console.log(JSON.stringify(availableFlights,null,2));// to see the inner objects value in the output (like json data)
+console.dir(availableFlights,{depth:null}); //another way to see inner objects(normal way to print)
