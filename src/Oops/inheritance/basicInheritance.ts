@@ -1,32 +1,32 @@
-// lowLevelInheritance.ts
+// // lowLevelInheritance.ts
 
-class BaseTest {
-  startTest(): void {
-    console.log("🔹 Browser launched");
-  }
+// class BaseTest {
+//   startTest(): void {
+//     console.log("🔹 Browser launched");
+//   }
 
-  endTest(): void {
-    console.log("🔹 Browser closed");
-  }
-}
+//   endTest(): void {
+//     console.log("🔹 Browser closed");
+//   }
+// }
 
-class LoginTest extends BaseTest {
-  testValidLogin(): void {
-    this.startTest(); // inherited
-    console.log("Entering username & password...");
-    console.log("Clicked Login Button...");
-    console.log("Login Successful!");
-    this.endTest(); // inherited
-  }
+// class LoginTest extends BaseTest {
+//   testValidLogin(): void {
+//     this.startTest(); // inherited
+//     console.log("Entering username & password...");
+//     console.log("Clicked Login Button...");
+//     console.log("Login Successful!");
+//     this.endTest(); // inherited
+//   }
 
-  testInvalidLogin(): void {
-    this.startTest();
-    console.log("Entered invalid credentials...");
-    console.log("Login failed...");
-    this.endTest();
-  }
-}
+//   testInvalidLogin(): void {
+//     this.startTest();
+//     console.log("Entered invalid credentials...");
+//     console.log("Login failed...");
+//     this.endTest();
+//   }
+// }
 
-const login = new LoginTest();
-login.testValidLogin();
-login.testInvalidLogin();
+// const login = new LoginTest();
+// login.testValidLogin();
+// login.testInvalidLogin();
